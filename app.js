@@ -6,14 +6,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const corsOptions = {
-    origin: '*', 
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-  };
-  
-app.use(cors(corsOptions));
+const cors = require('cors');
+app.use(cors());
 
 const usersRouter = require('./routes/users');
 const profilesRouter = require('./routes/profiles');
