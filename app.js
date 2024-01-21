@@ -6,11 +6,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const cors = require('cors');
+
 const usersRouter = require('./routes/users');
 const profilesRouter = require('./routes/profiles');
 
 const app = express();
-const cors = require('cors');
 
 app.use(cors());
 app.use(logger('dev'));
